@@ -22,7 +22,7 @@
 >src/api api地址目录  
 src/components 组件库  
 src/directive 自定义指令库  
-src/icons/svg 所有svg图片，菜单中使用的都是这里面的，如果有先添加请直接去<https://www. iconfont.cn/>下载svg图片放到文件家中，系统会自动读取当前文件夹下面的svg图片  
+src/icons/svg 所有svg图片，菜单中使用的都是这里面的，如果有先添加请直接去<https://www.iconfont.cn/>下载svg图片放到文件家中，系统会自动读取当前文件夹下面的svg图片  
 src/lang 多语言  
 src/layout 整体布局  
 src/router 路由  
