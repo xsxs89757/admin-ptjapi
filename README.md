@@ -1,7 +1,7 @@
 ## vue-element-admin
 #### 1.安装
 >`npm install || yarn`
-`npm run dev || yarn dev`
+>`npm run dev || yarn dev`
 #### 2.配置文件
 >.env.development `VUE_APP_BASE_API`修改为你的测试api地址
 .env.production  `VUE_APP_BASE_API` 正式地址修改
