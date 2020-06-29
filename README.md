@@ -9,16 +9,16 @@
 ###### `/src/setting.js`  
 >该文件内为整体配置项  
 `showLanguage=false`可以关闭语言的显示
-####3.权限
+#### 3.权限
 >1.使用指令的方式操作权限`v-permission="'menu.editMenu'"`  
 2.使用函数方式操作权限  
 `import checkPermission from '@/utils/permission'`  
 `methods: {checkPermission}`  
 `v-if="(!scope.row.is_external_link && !scope.row.hidden && checkPermission('menu.addMenu'))"`  
 正常情况下请使用指令方式操作权限，如果需要多重判断权限的情况请使用函数方式
-####4.创建新view
+#### 4.创建新view
 >`npm run new || yarn new`
-####5.目录　
+#### 5.目录　
 >src/api api地址目录  
 src/components 组件库  
 src/directive 自定义指令库  
