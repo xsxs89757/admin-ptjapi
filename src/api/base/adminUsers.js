@@ -49,7 +49,7 @@ export function clearAdminControllerLogs() {
 export function updatePassoword(data) {
   return request({
     url: '/admin-user/reset-password',
-    method: 'post',
+    method: 'put',
     data
   })
 }

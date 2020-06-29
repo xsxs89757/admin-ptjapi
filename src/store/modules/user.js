@@ -7,7 +7,11 @@ const state = {
   name: '',
   avatar: '',
   introduction: '',
-  roles: []
+  roles: [],
+  is_admin: false,
+  config: [],
+  dictionary: []
+
 }
 
 const mutations = {
