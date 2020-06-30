@@ -54,7 +54,7 @@ service.interceptors.response.use(
     }
     const res = response.data
     if (response.status < 200 || response.status > 299) {
-      if (res.error_code === 40000 || res.code === 40001) {
+      if (res.error_code === 40000 || res.error_code === 40001) {
         // to re-login
         MessageBox.confirm(i18n.t('login.expireLoginOut'), i18n.t('login.expireLoginOutTitle'), {
           confirmButtonText: i18n.t('login.refreshLogin'),
