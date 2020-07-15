@@ -1,4 +1,5 @@
 ## vue-element-admin
+### [api](https://github.com/xsxs89757/ptjapi)
 #### 1.安装
 >`npm install || yarn`   
 `npm run dev || yarn dev`
@@ -31,5 +32,8 @@ src/styles less
 src/utils 可引入的其他js 其中request 为封装的axios 头部请求全部添加了Authorization 与x-lang  x-lang 默认为zh  
 src/views 视图  
 src/main.js  
-src/permission.js 登录与权限的获取  
+src/permission.js 登录与权限的获取
+#### 6.socket.io
+>socket监听广播频道  `utrl/websocket` `permission.js`中有相关逻辑可以查看
+
 

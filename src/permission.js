@@ -4,6 +4,7 @@ import { Notification } from 'element-ui'
 import NProgress from 'nprogress' // progress bar
 import 'nprogress/nprogress.css' // progress bar style
 import { getToken } from '@/utils/auth' // get token from cookie
+import websocket from '@/utils/websocket'
 import getPageTitle from '@/utils/get-page-title'
 import i18n from '@/lang'
 
@@ -40,7 +41,12 @@ router.beforeEach(async(to, from, next) => {
           const accessRoutes = await store.dispatch('permission/generateRoutes', roles)
           // dynamically add accessible routes
           router.addRoutes(accessRoutes)
-
+          // socket connent
+          const socket = websocket()
+          socket.private('channel-square')
+            .listen('.server.square', (e) => {
+              console.log(e)
+            })
           // hack method to ensure that addRoutes is complete
           // set the replace: true, so the navigation will not leave a history record
           next({ ...to, replace: true })
