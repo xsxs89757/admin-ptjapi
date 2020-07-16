@@ -1,3 +1,4 @@
+import Vue from 'vue'
 import router from './router'
 import store from './store'
 import { Notification } from 'element-ui'
@@ -42,8 +43,8 @@ router.beforeEach(async(to, from, next) => {
           // dynamically add accessible routes
           router.addRoutes(accessRoutes)
           // socket connent
-          const socket = websocket()
-          socket.private('channel-square')
+          Vue.prototype.socket = websocket()
+          Vue.prototype.socket.private('channel-square')
             .listen('.server.square', (e) => {
               console.log(e)
             })

@@ -35,5 +35,6 @@ src/main.js
 src/permission.js 登录与权限的获取
 #### 6.socket.io
 >socket监听广播频道  `utrl/websocket` `permission.js`中有相关逻辑可以查看
+ 监听其他的广播频道请使用`this.socket.channel` 或者 `this.socket.private`
 
 
