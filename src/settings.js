@@ -40,5 +40,7 @@ module.exports = {
    */
   errorLog: 'production',
 
-  showLanguage: true
+  showLanguage: true,
+
+  startSocket: true
 }

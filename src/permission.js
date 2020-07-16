@@ -8,6 +8,7 @@ import { getToken } from '@/utils/auth' // get token from cookie
 import websocket from '@/utils/websocket'
 import getPageTitle from '@/utils/get-page-title'
 import i18n from '@/lang'
+import defaultSetting from './settings'
 
 NProgress.configure({ showSpinner: false }) // NProgress Configuration
 
@@ -43,11 +44,14 @@ router.beforeEach(async(to, from, next) => {
           // dynamically add accessible routes
           router.addRoutes(accessRoutes)
           // socket connent
-          Vue.prototype.socket = websocket()
-          Vue.prototype.socket.private('channel-square')
-            .listen('.server.square', (e) => {
-              console.log(e)
-            })
+          if (defaultSetting.startSocket) {
+            Vue.prototype.socket = websocket()
+            Vue.prototype.socket.private('channel-square')
+              .listen('.server.square', (e) => {
+                console.log(e)
+              })
+          }
+
           // hack method to ensure that addRoutes is complete
           // set the replace: true, so the navigation will not leave a history record
           next({ ...to, replace: true })
